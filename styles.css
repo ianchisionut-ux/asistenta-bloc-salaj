@@ -52,7 +52,7 @@ p { line-height: 1.7; }
 .button-dark { background: var(--navy-900); box-shadow: none; }
 .button-dark:hover { background: var(--navy-800); }
 
-.hero { min-height: 780px; position: relative; isolation: isolate; overflow: hidden; padding-top: 165px; background-image: linear-gradient(90deg, rgba(2,18,31,.76) 0%, rgba(3,25,42,.55) 48%, rgba(4,24,39,.22) 100%), url('/assets/hero.jpg'); background-size: cover; background-position: center; }
+.hero { min-height: 780px; position: relative; isolation: isolate; overflow: hidden; padding-top: 165px; background-image: linear-gradient(90deg, rgba(2,18,31,.76) 0%, rgba(3,25,42,.55) 48%, rgba(4,24,39,.22) 100%), url('/assets/hero-seo.jpg'); background-size: cover; background-position: center; }
 .hero-copy { text-shadow: 0 2px 16px rgba(0,0,0,.35); }
 .hero::after { content: ""; position: absolute; inset: auto 0 0; height: 150px; background: linear-gradient(transparent, rgba(1, 10, 17, .45)); z-index: -1; }
 .hero-glow { position: absolute; border-radius: 50%; filter: blur(4px); pointer-events: none; z-index: -1; }
@@ -205,6 +205,19 @@ input[type="range"]::-webkit-slider-thumb { width: 22px; height: 22px; appearanc
 .button-submit { width: 100%; }
 .form-note { margin: 12px 0 0; color: #7b8a94; font-size: .68rem; text-align: center; }
 
+.faq-section { background: var(--paper); }
+.faq-grid { display: grid; grid-template-columns: .78fr 1.22fr; gap: 90px; align-items: start; }
+.faq-heading { position: sticky; top: 120px; }
+.faq-heading h2 { margin: 15px 0 20px; font-size: clamp(2.2rem, 3.8vw, 3.6rem); line-height: 1.06; letter-spacing: -.045em; }
+.faq-heading p { max-width: 460px; color: var(--muted); }
+.faq-list { border-top: 1px solid var(--line); }
+.faq-list details { border-bottom: 1px solid var(--line); }
+.faq-list summary { display: grid; grid-template-columns: 1fr 24px; gap: 18px; align-items: center; padding: 24px 0; color: var(--ink); font-weight: 800; cursor: pointer; list-style: none; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary span { color: var(--green-dark); font-size: 1.3rem; transition: transform .25s; }
+.faq-list details[open] summary span { transform: rotate(45deg); }
+.faq-list details p { margin: -5px 42px 24px 0; color: var(--muted); font-size: .9rem; }
+
 .site-footer { margin-top: 100px; color: #91a4b1; background: var(--navy-950); }
 .footer-main { min-height: 180px; display: grid; grid-template-columns: 230px 1fr auto; gap: 50px; align-items: center; }
 .footer-main img { width: 220px; }
@@ -285,6 +298,8 @@ input[type="range"]::-webkit-slider-thumb { width: 22px; height: 22px; appearanc
   .main-nav a { padding: 16px; border-bottom: 1px solid var(--line); }
   .hero { padding-top: 150px; }
   .hero-grid, .process-grid, .calculator-shell, .company-grid, .offer-shell { grid-template-columns: 1fr; }
+  .faq-grid { grid-template-columns: 1fr; gap: 40px; }
+  .faq-heading { position: static; }
   .hero-grid { gap: 50px; }
   .hero-copy { text-align: center; }
   .hero-lead { margin-inline: auto; }
