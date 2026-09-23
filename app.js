@@ -64,6 +64,12 @@ const services = {
     title: 'Relația cu proprietarii',
     description: 'Informația utilă ajunge la timp, într-o formă care poate fi înțeleasă și verificată.',
     items: ['Informări administrative clare', 'Preluarea solicitărilor proprietarilor', 'Avizier și anunțuri organizate', 'Istoric documentat al comunicării']
+  },
+  infiintare: {
+    index: '04',
+    title: 'Înființare asociație de proprietari',
+    description: 'Oferim îndrumare practică pentru organizarea și constituirea asociației de proprietari a blocului.',
+    items: ['Lista documentelor necesare', 'Sprijin pentru statut și acordul de asociere', 'Organizarea adunării constitutive', 'Îndrumare pentru pașii de înregistrare']
   }
 };
 
@@ -136,5 +142,18 @@ $$('.reveal').forEach((element) => revealObserver.observe(element));
 
 const header = $('.site-header');
 window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 16), { passive: true });
-$('#year').textContent = new Date().getFullYear();
+const whatsappToggle = $('#whatsappToggle');
+const whatsappCard = $('#whatsappCard');
+const whatsappClose = $('.whatsapp-close');
 
+function setWhatsappCard(open) {
+  whatsappCard.classList.toggle('open', open);
+  whatsappCard.setAttribute('aria-hidden', String(!open));
+  whatsappToggle.setAttribute('aria-expanded', String(open));
+}
+
+whatsappToggle.addEventListener('click', () => setWhatsappCard(!whatsappCard.classList.contains('open')));
+whatsappClose.addEventListener('click', () => setWhatsappCard(false));
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') setWhatsappCard(false);
+});

@@ -9,6 +9,9 @@
     <meta property="og:description" content="Administrare clară. Blocuri bine îngrijite. Comunități mai liniștite." />
     <meta property="og:type" content="website" />
     <title>Asistență Bloc Sălaj | Administrare imobile în județul Sălaj</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
     <link rel="icon" href="/assets/favicon.png" type="image/png" />
     <link rel="stylesheet" href="/styles.css" />
     <script src="/app.js" defer></script>
@@ -78,7 +81,11 @@
               <article><span class="metric-icon">◎</span><div><small>Cheltuieli</small><strong>Ușor de urmărit</strong></div></article>
               <article><span class="metric-icon">◇</span><div><small>Intervenții</small><strong>Coordonate</strong></div></article>
             </div>
-            <div class="panel-footer"><span>O singură imagine de ansamblu</span><strong>Financiar · Tehnic · Administrativ</strong></div>
+            <div class="hero-qr">
+              <img src="/assets/whatsapp-qr.png" alt="Cod QR WhatsApp pentru 0766 668 694" />
+              <div><small>Scanează pentru contact direct</small><strong>WhatsApp · 0766 668 694</strong></div>
+              <a href="https://wa.me/40766668694?text=Bun%C4%83%20ziua%2C%20doresc%20o%20ofert%C4%83%20pentru%20administrarea%20blocului." target="_blank" rel="noopener noreferrer" aria-label="Deschide WhatsApp">↗</a>
+            </div>
           </div>
         </div>
 
@@ -118,6 +125,13 @@
               <h3>Relația cu proprietarii</h3>
               <p>Comunicare ordonată, avizier clar, preluarea solicitărilor și răspunsuri documentate.</p>
               <button class="text-button service-open" data-service="comunicare">Vezi ce include <span>→</span></button>
+            </article>
+            <article class="service-card reveal" data-delay="220" tabindex="0">
+              <div class="service-number">04</div>
+              <div class="service-icon" aria-hidden="true">⌂</div>
+              <h3>Înființare asociație</h3>
+              <p>Asistență pentru constituirea asociației de proprietari a blocului, de la documente la pașii de înregistrare.</p>
+              <button class="text-button service-open" data-service="infiintare">Vezi ce include <span>→</span></button>
             </article>
           </div>
         </div>
@@ -170,17 +184,17 @@
 
             <fieldset class="service-options">
               <legend>Servicii incluse</legend>
-              <label><input type="checkbox" checked disabled data-price="10" /><span><strong>Administrare financiară</strong><small>Baza pachetului</small></span><b>Inclus</b></label>
-              <label><input type="checkbox" checked data-price="3" /><span><strong>Coordonare tehnică</strong><small>Verificări și furnizori</small></span><b>+3 lei</b></label>
-              <label><input type="checkbox" checked data-price="2" /><span><strong>Comunicare digitală</strong><small>Informări și sesizări</small></span><b>+2 lei</b></label>
+              <label><input type="checkbox" checked disabled data-price="20" /><span><strong>Administrare financiară</strong><small>Baza pachetului</small></span><b>Inclus</b></label>
+              <label><input type="checkbox" data-price="3" /><span><strong>Coordonare tehnică</strong><small>Verificări și furnizori</small></span><b>+3 lei</b></label>
+              <label><input type="checkbox" data-price="2" /><span><strong>Comunicare digitală</strong><small>Informări și sesizări</small></span><b>+2 lei</b></label>
               <label><input type="checkbox" data-price="8" /><span><strong>Îngrijire spații comune</strong><small>Pachet opțional</small></span><b>+8 lei</b></label>
             </fieldset>
           </div>
 
           <aside class="price-card" aria-live="polite">
             <span class="price-kicker">Estimare lunară</span>
-            <div class="price-main"><strong id="pricePerApartment">15</strong><span>lei<br /><small>/ apartament</small></span></div>
-            <div class="price-line"><span>Total estimat / scară</span><strong id="totalPrice">450 lei</strong></div>
+            <div class="price-main"><strong id="pricePerApartment">20</strong><span>lei<br /><small>/ apartament</small></span></div>
+            <div class="price-line"><span>Total estimat / scară</span><strong id="totalPrice">600 lei</strong></div>
             <div class="price-line"><span>Evaluare inițială</span><strong>Gratuită</strong></div>
             <p>Fără valoare contractuală. Complexitatea imobilului poate modifica tariful final.</p>
             <a class="button" href="#oferta" id="calculatorCta">Cere oferta personalizată <span>→</span></a>
@@ -203,9 +217,7 @@
               <div><dt>Registrul Comerțului</dt><dd>J31/82/2013</dd></div>
               <div><dt>Data înființării</dt><dd>06 martie 2013</dd></div>
               <div><dt>Status</dt><dd><span class="live-dot"></span> În funcțiune</dd></div>
-              <div><dt>Plătitor TVA</dt><dd>Nu</dd></div>
               <div class="full"><dt>Sediu social</dt><dd>Str. Gheorghe Doja nr. 48, bl. D48, et. 1, ap. 3, Zalău, jud. Sălaj</dd></div>
-              <div class="full"><dt>CAEN principal</dt><dd>4615 · Activități de întreținere peisagistică</dd></div>
             </dl>
           </div>
         </div>
@@ -246,7 +258,7 @@
         <p>Servicii profesionale de administrare imobile în județul Sălaj.</p>
         <nav aria-label="Navigație subsol"><a href="#servicii">Servicii</a><a href="#calculator">Estimator</a><a href="#companie">Companie</a><a href="#oferta">Evaluare</a></nav>
       </div>
-      <div class="container footer-bottom"><span>© <span id="year"></span> Asistență Bloc Sălaj</span><span>CUI 31321779 · J31/82/2013</span></div>
+      <div class="container footer-bottom"><span>© 2026 Asistență Bloc Sălaj. Toate drepturile rezervate.</span><span>CUI 31321779 · J31/82/2013</span><span>Creat de <strong>Nextlevel</strong></span></div>
     </footer>
 
     <dialog class="modal" id="serviceModal">
@@ -267,7 +279,20 @@
       <button class="button button-dark" id="copyRequest" type="button">Copiază cererea <span>⧉</span></button>
     </dialog>
 
+    <aside class="whatsapp-card" id="whatsappCard" aria-hidden="true">
+      <button class="whatsapp-close" type="button" aria-label="Închide codul QR">×</button>
+      <span>Scrie-ne pe WhatsApp</span>
+      <strong>0766 668 694</strong>
+      <img src="/assets/whatsapp-qr.png" alt="Cod QR către WhatsApp, numărul 0766 668 694" />
+      <small>Scanează codul sau deschide conversația direct.</small>
+      <a href="https://wa.me/40766668694?text=Bun%C4%83%20ziua%2C%20doresc%20o%20ofert%C4%83%20pentru%20administrarea%20blocului." target="_blank" rel="noopener noreferrer">Deschide WhatsApp <span>↗</span></a>
+    </aside>
+
+    <button class="whatsapp-float" id="whatsappToggle" type="button" aria-expanded="false" aria-controls="whatsappCard">
+      <span class="wa-symbol" aria-hidden="true">WA</span>
+      <span><small>WhatsApp</small><strong>0766 668 694</strong></span>
+    </button>
+
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
   </body>
 </html>
-
