@@ -1,0 +1,9 @@
+{
+  "name": "asistenta-bloc-salaj",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "check": "node --check app.js"
+  }
+}
