@@ -1,5 +1,5 @@
-const DESTINATION_EMAIL = 'asistentablocsalaj@gmail.com';
-const FROM_EMAIL = 'Asistență Bloc Sălaj <onboarding@resend.dev>';
+const DESTINATION_EMAIL = process.env.CONTACT_EMAIL || 'asistentablocsalaj@gmail.com';
+const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'Asistență Bloc Sălaj <onboarding@resend.dev>';
 
 const limits = {
   name: 100,
