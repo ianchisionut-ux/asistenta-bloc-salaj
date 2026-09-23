@@ -97,13 +97,44 @@ $('#modalCta').addEventListener('click', () => closeDialog(serviceModal));
 
 const offerForm = $('#offerForm');
 const requestModal = $('#requestModal');
-offerForm.addEventListener('submit', (event) => {
+offerForm.addEventListener('submit', async (event) => {
   event.preventDefault();
   const data = new FormData(offerForm);
   const details = String(data.get('details') || '').trim() || 'Evaluare generală a serviciilor de administrare.';
   const summary = `Solicitare evaluare — Asistență Bloc Sălaj\n\nNume: ${data.get('name')}\nTelefon: ${data.get('phone')}\nLocalitate: ${data.get('city')}\nNumăr apartamente: ${data.get('apartments')}\n\nNecesități:\n${details}`;
-  $('#requestSummary').textContent = summary;
-  requestModal.showModal();
+  const submitButton = offerForm.querySelector('[type="submit"]');
+  const initialButtonContent = submitButton.innerHTML;
+  submitButton.disabled = true;
+  submitButton.textContent = 'Se trimite…';
+
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: data.get('name'),
+        phone: data.get('phone'),
+        city: data.get('city'),
+        apartments: data.get('apartments'),
+        details,
+        website: data.get('website'),
+        requestId: crypto.randomUUID(),
+      }),
+    });
+    const result = await response.json();
+    if (!response.ok) throw new Error(result.error || 'Cererea nu a putut fi trimisă.');
+
+    $('#requestSummary').textContent = summary;
+    requestModal.showModal();
+    offerForm.reset();
+    $('input[name="apartments"]').value = range.value;
+    showToast('Cererea a fost trimisă cu succes.');
+  } catch (error) {
+    showToast(error.message || 'Cererea nu a putut fi trimisă. Încearcă din nou.');
+  } finally {
+    submitButton.disabled = false;
+    submitButton.innerHTML = initialButtonContent;
+  }
 });
 
 $('#copyRequest').addEventListener('click', async () => {

@@ -300,25 +300,26 @@
           <div class="offer-copy">
             <div class="eyebrow eyebrow-light"><span></span> Primul pas</div>
             <h2>Spune-ne pe scurt de ce are nevoie blocul tău.</h2>
-            <p>Completează datele de bază și îți pregătim o cerere structurată, gata de copiat și trimis prin canalul de contact preferat.</p>
+            <p>Completează datele de bază, iar cererea ajunge direct la echipa Asistență Bloc Sălaj.</p>
             <ul>
               <li><span>✓</span> Fără angajament</li>
-              <li><span>✓</span> Datele rămân în browserul tău</li>
-              <li><span>✓</span> Rezumat generat instant</li>
+              <li><span>✓</span> Trimitere securizată prin Resend</li>
+              <li><span>✓</span> Confirmare instantă</li>
             </ul>
           </div>
           <form class="offer-form" id="offerForm">
+            <label class="form-honeypot" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off" /></label>
             <div class="field-row">
-              <label>Nume și prenume<input name="name" type="text" autocomplete="name" required placeholder="Ion Popescu" /></label>
-              <label>Telefon<input name="phone" type="tel" autocomplete="tel" required placeholder="07xx xxx xxx" /></label>
+              <label>Nume și prenume<input name="name" type="text" autocomplete="name" maxlength="100" required placeholder="Ion Popescu" /></label>
+              <label>Telefon<input name="phone" type="tel" autocomplete="tel" maxlength="40" required placeholder="07xx xxx xxx" /></label>
             </div>
             <div class="field-row">
-              <label>Localitate<input name="city" type="text" required placeholder="Zalău" /></label>
+              <label>Localitate<input name="city" type="text" maxlength="100" required placeholder="Zalău" /></label>
               <label>Apartamente<input name="apartments" type="number" min="4" max="500" required value="30" /></label>
             </div>
-            <label>Ce doriți să îmbunătățiți?<textarea name="details" rows="4" placeholder="Ex.: evidența cheltuielilor, mentenanța, comunicarea cu proprietarii..."></textarea></label>
-            <button class="button button-submit" type="submit">Generează cererea <span>→</span></button>
-            <p class="form-note">Formularul nu transmite date către un server. Vei putea copia rezumatul generat.</p>
+            <label>Ce doriți să îmbunătățiți?<textarea name="details" rows="4" maxlength="2000" placeholder="Ex.: evidența cheltuielilor, mentenanța, comunicarea cu proprietarii..."></textarea></label>
+            <button class="button button-submit" type="submit">Trimite cererea <span>→</span></button>
+            <p class="form-note">Prin trimitere, ești de acord ca datele introduse să fie folosite pentru a răspunde solicitării tale.</p>
           </form>
         </div>
       </section>
@@ -372,11 +373,11 @@
 
     <dialog class="modal request-modal" id="requestModal">
       <button class="modal-close" type="button" aria-label="Închide">×</button>
-      <span class="modal-index">CERERE PREGĂTITĂ</span>
-      <h2>Ai un rezumat clar.</h2>
-      <p>Copiază textul de mai jos și trimite-l prin canalul de contact pe care îl vei stabili cu echipa.</p>
+      <span class="modal-index">CERERE TRIMISĂ</span>
+      <h2>Mulțumim pentru solicitare.</h2>
+      <p>Cererea a ajuns la echipa Asistență Bloc Sălaj. Te vom contacta folosind datele completate.</p>
       <pre id="requestSummary"></pre>
-      <button class="button button-dark" id="copyRequest" type="button">Copiază cererea <span>⧉</span></button>
+      <button class="button button-dark" id="copyRequest" type="button">Copiază detaliile <span>⧉</span></button>
     </dialog>
 
     <aside class="whatsapp-card" id="whatsappCard" aria-hidden="true">
