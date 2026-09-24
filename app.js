@@ -17,6 +17,28 @@ $$('.main-nav a').forEach((link) => link.addEventListener('click', () => {
   document.body.classList.remove('menu-open');
 }));
 
+const heroBackgrounds = $$('[data-hero-bg]');
+if (heroBackgrounds.length > 1) {
+  const reduceHeroMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let heroIndex = 0;
+  let heroTimer;
+
+  function scheduleHeroBackground() {
+    clearTimeout(heroTimer);
+    if (reduceHeroMotion || document.hidden) return;
+    heroTimer = setTimeout(() => showHeroBackground(heroIndex + 1), 7000);
+  }
+
+  function showHeroBackground(index) {
+    heroIndex = (index + heroBackgrounds.length) % heroBackgrounds.length;
+    heroBackgrounds.forEach((background, backgroundIndex) => background.classList.toggle('is-active', backgroundIndex === heroIndex));
+    scheduleHeroBackground();
+  }
+
+  document.addEventListener('visibilitychange', scheduleHeroBackground);
+  scheduleHeroBackground();
+}
+
 const range = $('#apartmentRange');
 const rangeOutput = $('#apartmentOutput');
 const packageChecks = $$('.service-options input[type="checkbox"]');
@@ -158,6 +180,64 @@ function showToast(message) {
   toast.classList.add('show');
   clearTimeout(showToast.timer);
   showToast.timer = setTimeout(() => toast.classList.remove('show'), 2800);
+}
+
+const carousel = $('[data-carousel]');
+if (carousel) {
+  const slides = $$('[data-slide]', carousel);
+  const dots = $$('[data-slide-to]', carousel);
+  const status = $('[data-carousel-status]', carousel);
+  const currentSlide = $('[data-current-slide]', carousel);
+  const progress = $('.carousel-progress span', carousel);
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const duration = 6500;
+  let activeIndex = 0;
+  let timer;
+  let paused = false;
+
+  function scheduleNext() {
+    clearTimeout(timer);
+    progress.classList.remove('is-running');
+    void progress.offsetWidth;
+    if (reduceMotion || paused || document.hidden) return;
+    progress.classList.add('is-running');
+    timer = setTimeout(() => showSlide(activeIndex + 1), duration);
+  }
+
+  function showSlide(index, announce = true) {
+    activeIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      const active = slideIndex === activeIndex;
+      slide.classList.toggle('is-active', active);
+      slide.setAttribute('aria-hidden', String(!active));
+    });
+    dots.forEach((dot, dotIndex) => {
+      const active = dotIndex === activeIndex;
+      dot.classList.toggle('is-active', active);
+      dot.setAttribute('aria-selected', String(active));
+    });
+    currentSlide.textContent = String(activeIndex + 1).padStart(2, '0');
+    if (announce) status.textContent = `Capitolul ${activeIndex + 1} din ${slides.length}: ${dots[activeIndex].getAttribute('aria-label')}`;
+    scheduleNext();
+  }
+
+  $('.carousel-prev', carousel).addEventListener('click', () => showSlide(activeIndex - 1));
+  $('.carousel-next', carousel).addEventListener('click', () => showSlide(activeIndex + 1));
+  dots.forEach((dot) => dot.addEventListener('click', () => showSlide(Number(dot.dataset.slideTo))));
+  carousel.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') showSlide(activeIndex - 1);
+    if (event.key === 'ArrowRight') showSlide(activeIndex + 1);
+  });
+  carousel.addEventListener('mouseenter', () => { paused = true; scheduleNext(); });
+  carousel.addEventListener('mouseleave', () => { paused = false; scheduleNext(); });
+  carousel.addEventListener('focusin', () => { paused = true; scheduleNext(); });
+  carousel.addEventListener('focusout', (event) => {
+    if (carousel.contains(event.relatedTarget)) return;
+    paused = false;
+    scheduleNext();
+  });
+  document.addEventListener('visibilitychange', scheduleNext);
+  showSlide(0, false);
 }
 
 const revealObserver = new IntersectionObserver((entries) => {
