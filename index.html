@@ -105,6 +105,26 @@
     </script>
   </head>
   <body>
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="icon-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+      <symbol id="icon-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M6 16V9a4 4 0 0 1 4-4h5"/></symbol>
+      <symbol id="icon-calculator" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 19h.01M12 19h4"/></symbol>
+      <symbol id="icon-building" viewBox="0 0 24 24"><path d="M3 21h18M6 21V5l6-3v19M12 7h6v14M9 7h.01M9 11h.01M9 15h.01M15 11h.01M18 11h.01M15 15h.01M18 15h.01"/></symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="icon-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+      <symbol id="icon-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h6"/></symbol>
+      <symbol id="icon-message" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4zM8 9h8M8 13h5"/></symbol>
+      <symbol id="icon-wallet" viewBox="0 0 24 24"><path d="M4 6h15a2 2 0 0 1 2 2v11H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h13M16 11h5v4h-5a2 2 0 0 1 0-4z"/></symbol>
+      <symbol id="icon-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5-5L12 3.6 9.6 6 7.3 3.7a4 4 0 0 0 5 5L5 16l3 3 7.3-7.3a4 4 0 0 0 5-5L18 9l-3-3z"/></symbol>
+      <symbol id="icon-home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8v10h-6v-6H9v6H3z"/></symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-4"/></symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="icon-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2"/></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+      <symbol id="icon-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4zM22 2 11 13"/></symbol>
+      <symbol id="icon-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+      <symbol id="icon-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M3 21v-2a6 6 0 0 1 12 0v2M16 4a4 4 0 0 1 0 8M17 15a6 6 0 0 1 4 6"/></symbol>
+    </svg>
     <a class="skip-link" href="#continut">Sari la conținut</a>
 
     <header class="site-header" id="acasa">
@@ -118,13 +138,13 @@
         </button>
 
         <nav class="main-nav" id="main-nav" aria-label="Navigație principală">
-          <a href="#servicii">Servicii</a>
-          <a href="#proces">Cum lucrăm</a>
-          <a href="#calculator">Calculator</a>
-          <a href="#companie">Companie</a>
+          <a href="#servicii"><svg class="icon" aria-hidden="true"><use href="#icon-grid" /></svg>Servicii</a>
+          <a href="#proces"><svg class="icon" aria-hidden="true"><use href="#icon-route" /></svg>Cum lucrăm</a>
+          <a href="#calculator"><svg class="icon" aria-hidden="true"><use href="#icon-calculator" /></svg>Calculator</a>
+          <a href="#companie"><svg class="icon" aria-hidden="true"><use href="#icon-building" /></svg>Companie</a>
         </nav>
 
-        <a class="button button-small nav-cta" href="#oferta">Cere o evaluare <span aria-hidden="true">↗</span></a>
+        <a class="button button-small nav-cta" href="#oferta">Cere o evaluare <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right" /></svg></a>
       </div>
     </header>
 
@@ -143,11 +163,11 @@
             <h1>Administrare blocuri<br /><em>în Zalău și Sălaj.</em></h1>
             <p class="hero-lead">Servicii de administrare imobile pentru asociații de proprietari: evidență financiară, coordonare tehnică și comunicare clară.</p>
             <div class="hero-actions">
-              <a class="button" href="#oferta">Solicită o evaluare <span aria-hidden="true">→</span></a>
-              <a class="button button-ghost" href="#calculator">Estimează costul</a>
+              <a class="button" href="#oferta"><svg class="icon" aria-hidden="true"><use href="#icon-send" /></svg>Solicită o evaluare</a>
+              <a class="button button-ghost" href="#calculator"><svg class="icon" aria-hidden="true"><use href="#icon-calculator" /></svg>Estimează costul</a>
             </div>
             <div class="hero-note">
-              <span class="pulse-dot"></span>
+              <svg class="icon" aria-hidden="true"><use href="#icon-map-pin" /></svg>
               <span>Disponibili pentru asociații din Zalău și județul Sălaj</span>
             </div>
           </div>
@@ -158,16 +178,19 @@
               <span><small>Scanează pentru contact direct</small><strong>WhatsApp · 0766 668 394 <span aria-hidden="true">↗</span></strong></span>
             </a>
             <div class="metric-grid">
-              <article><span class="metric-icon">✓</span><div><small>Documente</small><strong>Organizate</strong></div></article>
-              <article><span class="metric-icon">↗</span><div><small>Comunicare</small><strong>Mai rapidă</strong></div></article>
-              <article><span class="metric-icon">◎</span><div><small>Cheltuieli</small><strong>Ușor de urmărit</strong></div></article>
-              <article><span class="metric-icon">◇</span><div><small>Intervenții</small><strong>Coordonate</strong></div></article>
+              <article><span class="metric-icon"><svg class="icon" aria-hidden="true"><use href="#icon-file" /></svg></span><div><small>Documente</small><strong>Organizate</strong></div></article>
+              <article><span class="metric-icon"><svg class="icon" aria-hidden="true"><use href="#icon-message" /></svg></span><div><small>Comunicare</small><strong>Mai rapidă</strong></div></article>
+              <article><span class="metric-icon"><svg class="icon" aria-hidden="true"><use href="#icon-wallet" /></svg></span><div><small>Cheltuieli</small><strong>Ușor de urmărit</strong></div></article>
+              <article><span class="metric-icon"><svg class="icon" aria-hidden="true"><use href="#icon-wrench" /></svg></span><div><small>Intervenții</small><strong>Coordonate</strong></div></article>
             </div>
           </div>
         </div>
 
         <div class="container trust-strip" aria-label="Principiile serviciului">
-          <span>Transparență</span><i></i><span>Rigoare</span><i></i><span>Răspuns prompt</span><i></i><span>Prezență locală</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#icon-file" /></svg>Transparență</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#icon-shield" /></svg>Rigoare</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#icon-clock" /></svg>Răspuns prompt</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#icon-map-pin" /></svg>Prezență locală</span>
         </div>
       </section>
 
@@ -184,31 +207,31 @@
           <div class="services-grid">
             <article class="service-card reveal" tabindex="0">
               <div class="service-number">01</div>
-              <div class="service-icon" aria-hidden="true">▤</div>
+              <div class="service-icon" aria-hidden="true"><svg class="icon"><use href="#icon-wallet" /></svg></div>
               <h3>Financiar & contabil</h3>
               <p>Liste de plată, evidența fondurilor, urmărirea facturilor și rapoarte ușor de înțeles.</p>
-              <button class="text-button service-open" data-service="financiar">Vezi ce include <span>→</span></button>
+              <button class="text-button service-open" data-service="financiar">Vezi ce include <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right" /></svg></button>
             </article>
             <article class="service-card featured reveal" data-delay="80" tabindex="0">
               <div class="service-number">02</div>
-              <div class="service-icon" aria-hidden="true">⌁</div>
+              <div class="service-icon" aria-hidden="true"><svg class="icon"><use href="#icon-wrench" /></svg></div>
               <h3>Tehnic & mentenanță</h3>
               <p>Sesizări centralizate, verificări planificate și coordonarea furnizorilor atunci când apar probleme.</p>
-              <button class="text-button service-open" data-service="tehnic">Vezi ce include <span>→</span></button>
+              <button class="text-button service-open" data-service="tehnic">Vezi ce include <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right" /></svg></button>
             </article>
             <article class="service-card reveal" data-delay="160" tabindex="0">
               <div class="service-number">03</div>
-              <div class="service-icon" aria-hidden="true">◫</div>
+              <div class="service-icon" aria-hidden="true"><svg class="icon"><use href="#icon-message" /></svg></div>
               <h3>Relația cu proprietarii</h3>
               <p>Comunicare ordonată, avizier clar, preluarea solicitărilor și răspunsuri documentate.</p>
-              <button class="text-button service-open" data-service="comunicare">Vezi ce include <span>→</span></button>
+              <button class="text-button service-open" data-service="comunicare">Vezi ce include <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right" /></svg></button>
             </article>
             <article class="service-card reveal" data-delay="220" tabindex="0">
               <div class="service-number">04</div>
-              <div class="service-icon" aria-hidden="true">⌂</div>
+              <div class="service-icon" aria-hidden="true"><svg class="icon"><use href="#icon-home" /></svg></div>
               <h3>Înființare asociație</h3>
               <p>Asistență pentru constituirea asociației de proprietari a blocului, de la documente la pașii de înregistrare.</p>
-              <button class="text-button service-open" data-service="infiintare">Vezi ce include <span>→</span></button>
+              <button class="text-button service-open" data-service="infiintare">Vezi ce include <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right" /></svg></button>
             </article>
           </div>
         </div>
@@ -292,8 +315,8 @@
 
             <div class="showcase-controls">
               <div class="carousel-buttons">
-                <button class="carousel-arrow carousel-prev" type="button" aria-label="Imaginea anterioară">←</button>
-                <button class="carousel-arrow carousel-next" type="button" aria-label="Imaginea următoare">→</button>
+                <button class="carousel-arrow carousel-prev" type="button" aria-label="Imaginea anterioară"><svg class="icon icon-back" aria-hidden="true"><use href="#icon-arrow-right" /></svg></button>
+                <button class="carousel-arrow carousel-next" type="button" aria-label="Imaginea următoare"><svg class="icon" aria-hidden="true"><use href="#icon-arrow-right" /></svg></button>
               </div>
               <div class="carousel-dots" role="tablist" aria-label="Alege capitolul">
                 <button class="is-active" type="button" role="tab" aria-selected="true" aria-label="Financiar" data-slide-to="0"><span>Financiar</span></button>
@@ -335,7 +358,7 @@
                 <p>Preluăm organizat evidențele și comunicarea, apoi menținem un ritm previzibil de lucru și raportare.</p>
               </article>
             </div>
-            <a class="button button-dark" href="#oferta">Începe cu o evaluare <span>→</span></a>
+            <a class="button button-dark" href="#oferta">Începe cu o evaluare <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right" /></svg></a>
           </div>
         </div>
       </section>
@@ -368,7 +391,7 @@
             <div class="price-line"><span>Total estimat / scară</span><strong id="totalPrice">600 lei</strong></div>
             <div class="price-line"><span>Evaluare inițială</span><strong>Gratuită</strong></div>
             <p>Fără valoare contractuală. Complexitatea imobilului poate modifica tariful final.</p>
-            <a class="button" href="#oferta" id="calculatorCta">Cere oferta personalizată <span>→</span></a>
+            <a class="button" href="#oferta" id="calculatorCta">Cere oferta personalizată <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right" /></svg></a>
           </aside>
         </div>
       </section>
@@ -379,7 +402,7 @@
             <div class="eyebrow"><span></span> Identitate locală</div>
             <h2>Aproape de blocurile și oamenii din Sălaj.</h2>
             <p>Asistență Bloc Sălaj este numele sub care construim un serviciu de administrare atent, lizibil și orientat către buna funcționare a comunității.</p>
-            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Strada+Gheorghe+Doja+48+Zalau+Salaj" target="_blank" rel="noopener noreferrer">Vezi sediul pe hartă <span>↗</span></a>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Strada+Gheorghe+Doja+48+Zalau+Salaj" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#icon-map-pin" /></svg>Vezi sediul pe hartă <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right" /></svg></a>
           </div>
           <div class="company-card reveal" data-delay="100">
             <div class="company-card-head"><img src="/assets/favicon.png" alt="" /><div><small>Date de identificare</small><strong>Asistență Bloc Sălaj</strong></div></div>
@@ -401,9 +424,9 @@
             <h2>Spune-ne pe scurt de ce are nevoie blocul tău.</h2>
             <p>Completează datele de bază, iar cererea ajunge direct la echipa Asistență Bloc Sălaj.</p>
             <ul>
-              <li><span>✓</span> Fără angajament</li>
-              <li><span>✓</span> Trimitere securizată prin Resend</li>
-              <li><span>✓</span> Confirmare instantă</li>
+              <li><span><svg class="icon" aria-hidden="true"><use href="#icon-check" /></svg></span> Fără angajament</li>
+              <li><span><svg class="icon" aria-hidden="true"><use href="#icon-shield" /></svg></span> Trimitere securizată prin Resend</li>
+              <li><span><svg class="icon" aria-hidden="true"><use href="#icon-clock" /></svg></span> Confirmare instantă</li>
             </ul>
           </div>
           <form class="offer-form" id="offerForm">
@@ -417,7 +440,7 @@
               <label>Apartamente<input name="apartments" type="number" min="4" max="500" required value="30" /></label>
             </div>
             <label>Ce doriți să îmbunătățiți?<textarea name="details" rows="4" maxlength="2000" placeholder="Ex.: evidența cheltuielilor, mentenanța, comunicarea cu proprietarii..."></textarea></label>
-            <button class="button button-submit" type="submit">Trimite cererea <span>→</span></button>
+            <button class="button button-submit" type="submit"><svg class="icon" aria-hidden="true"><use href="#icon-send" /></svg>Trimite cererea</button>
             <p class="form-note">Prin trimitere, ești de acord ca datele introduse să fie folosite pentru a răspunde solicitării tale.</p>
           </form>
         </div>
@@ -456,7 +479,7 @@
       <div class="container footer-main">
         <img src="/assets/logo-horizontal.png" alt="Asistență Bloc Sălaj" />
         <p>Administrare blocuri și imobile pentru asociațiile de proprietari din Zalău și județul Sălaj.</p>
-        <nav aria-label="Navigație subsol"><a href="#servicii">Servicii</a><a href="#calculator">Calculator</a><a href="#companie">Companie</a><a href="#oferta">Evaluare</a></nav>
+        <nav aria-label="Navigație subsol"><a href="#servicii"><svg class="icon" aria-hidden="true"><use href="#icon-grid" /></svg>Servicii</a><a href="#calculator"><svg class="icon" aria-hidden="true"><use href="#icon-calculator" /></svg>Calculator</a><a href="#companie"><svg class="icon" aria-hidden="true"><use href="#icon-building" /></svg>Companie</a><a href="#oferta"><svg class="icon" aria-hidden="true"><use href="#icon-send" /></svg>Evaluare</a></nav>
       </div>
       <div class="container footer-bottom"><span>© 2026 Asistență Bloc Sălaj. Toate drepturile rezervate.</span><span>CUI 31321779 · J31/82/2013</span><span>Creat de <a href="https://www.nextlevel-agency.ro/" target="_blank" rel="noopener noreferrer"><strong>Nextlevel</strong></a></span></div>
     </footer>
@@ -467,7 +490,7 @@
       <h2 id="modalTitle">Serviciu</h2>
       <p id="modalDescription"></p>
       <ul id="modalList"></ul>
-      <a class="button button-dark" href="#oferta" id="modalCta">Discută despre acest serviciu <span>→</span></a>
+      <a class="button button-dark" href="#oferta" id="modalCta">Discută despre acest serviciu <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right" /></svg></a>
     </dialog>
 
     <dialog class="modal request-modal" id="requestModal">
@@ -476,7 +499,7 @@
       <h2>Mulțumim pentru solicitare.</h2>
       <p>Cererea a ajuns la echipa Asistență Bloc Sălaj. Te vom contacta folosind datele completate.</p>
       <pre id="requestSummary"></pre>
-      <button class="button button-dark" id="copyRequest" type="button">Copiază detaliile <span>⧉</span></button>
+      <button class="button button-dark" id="copyRequest" type="button"><svg class="icon" aria-hidden="true"><use href="#icon-copy" /></svg>Copiază detaliile</button>
     </dialog>
 
     <aside class="whatsapp-card" id="whatsappCard" aria-hidden="true">
@@ -485,7 +508,7 @@
       <strong>0766 668 394</strong>
       <img src="/assets/whatsapp-qr-394.png" alt="Cod QR către WhatsApp, numărul 0766 668 394" />
       <small>Scanează codul sau deschide conversația direct.</small>
-      <a href="https://wa.me/40766668394" target="_blank" rel="noopener noreferrer">Deschide WhatsApp <span>↗</span></a>
+      <a href="https://wa.me/40766668394" target="_blank" rel="noopener noreferrer">Deschide WhatsApp <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right" /></svg></a>
     </aside>
 
     <button class="whatsapp-float" id="whatsappToggle" type="button" aria-label="Contact pe WhatsApp" aria-expanded="false" aria-controls="whatsappCard">
