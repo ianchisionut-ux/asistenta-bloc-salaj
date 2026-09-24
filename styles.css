@@ -120,7 +120,11 @@ p { line-height: 1.7; }
 .text-button span { display: inline-block; margin-left: 6px; transition: transform .2s; }
 .text-button:hover span { transform: translateX(5px); }
 
-.process-section { background: var(--paper); }
+.process-section {
+  background:
+    linear-gradient(90deg, rgba(246,249,248,.88), rgba(246,249,248,.76) 52%, rgba(246,249,248,.9)),
+    url('/assets/process-building.jpg') center 48% / cover no-repeat;
+}
 .process-grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 100px; align-items: center; }
 .process-visual { min-height: 560px; position: relative; display: grid; place-items: center; overflow: hidden; border-radius: 32px; background: radial-gradient(circle at 50% 45%, #e8fff0, #dfeaec 66%, #d5e2e5); }
 .process-visual img { position: relative; z-index: 3; width: 190px; filter: drop-shadow(0 26px 30px rgba(7,29,49,.2)); }
