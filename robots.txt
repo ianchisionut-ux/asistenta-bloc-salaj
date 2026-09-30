@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://asistenta-bloc-salaj.vercel.app/sitemap.xml
-
+Sitemap: https://www.pro-bloc-manager.ro/sitemap.xml
