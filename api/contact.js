@@ -1,5 +1,5 @@
 const DESTINATION_EMAIL = process.env.CONTACT_EMAIL || 'asistentablocsalaj@gmail.com';
-const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'Asistență Bloc Sălaj <onboarding@resend.dev>';
+const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'PRO BLOC MANAGER <onboarding@resend.dev>';
 
 const limits = {
   name: 100,
@@ -57,7 +57,7 @@ export default async function handler(request, response) {
   };
 
   const text = [
-    'Solicitare nouă — Asistență Bloc Sălaj',
+    'Solicitare nouă — PRO BLOC MANAGER',
     '',
     `Nume: ${name}`,
     `Telefon: ${phone}`,

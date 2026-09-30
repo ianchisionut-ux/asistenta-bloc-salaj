@@ -40,7 +40,12 @@ p { line-height: 1.7; }
 .site-header { position: fixed; inset: 0 0 auto; z-index: 100; padding: 14px 0; transition: background .3s, box-shadow .3s, padding .3s; }
 .site-header.scrolled { padding: 8px 0; background: rgba(255,255,255,.9); box-shadow: 0 8px 30px rgba(7, 29, 49, .12); backdrop-filter: blur(16px); }
 .nav-shell { width: min(1240px, calc(100% - 32px)); margin: auto; height: 66px; display: grid; grid-template-columns: 240px 1fr auto; align-items: center; gap: 28px; padding: 8px 10px 8px 18px; border: 1px solid rgba(7,29,49,.09); background: rgba(255,255,255,.96); backdrop-filter: blur(18px); border-radius: 18px; box-shadow: 0 12px 40px rgba(7,29,49,.12); }
-.brand img { width: 210px; height: 48px; object-fit: contain; object-position: left center; }
+.brand { display: inline-flex; align-items: center; gap: 9px; min-width: 0; }
+.brand-mark { width: 48px; height: 48px; flex: 0 0 auto; object-fit: contain; }
+.brand-wordmark { display: grid; min-width: 0; line-height: .9; letter-spacing: -.025em; }
+.brand-wordmark strong { color: var(--navy-900); font-size: .92rem; font-weight: 850; }
+.brand-wordmark em { margin-top: 3px; color: var(--green-dark); font-size: 1.08rem; font-style: normal; font-weight: 850; }
+.brand-wordmark small { margin-top: 5px; color: #657783; font-size: .43rem; font-weight: 800; letter-spacing: .09em; }
 .main-nav { display: flex; justify-content: center; gap: 30px; }
 .main-nav a { display: inline-flex; align-items: center; gap: 7px; color: #304553; font-size: .9rem; font-weight: 700; transition: color .2s; }
 .main-nav a .icon { width: 15px; height: 15px; color: var(--green-dark); transition: transform .25s; }
@@ -318,7 +323,10 @@ input[type="range"]::-webkit-slider-thumb { width: 22px; height: 22px; appearanc
 
 .site-footer { margin-top: 100px; color: #91a4b1; background: var(--navy-950); }
 .footer-main { min-height: 180px; display: grid; grid-template-columns: 230px 1fr auto; gap: 50px; align-items: center; }
-.footer-main img { width: 220px; }
+.brand-footer .brand-mark { width: 54px; height: 54px; }
+.brand-footer .brand-wordmark strong { color: white; }
+.brand-footer .brand-wordmark em { color: #69e49e; }
+.brand-footer .brand-wordmark small { color: #7f96a4; }
 .footer-main p { max-width: 360px; font-size: .8rem; }
 .footer-main nav { display: flex; gap: 24px; font-size: .78rem; font-weight: 750; }
 .footer-main nav a { display: inline-flex; align-items: center; gap: 6px; }
@@ -433,7 +441,10 @@ input[type="range"]::-webkit-slider-thumb { width: 22px; height: 22px; appearanc
   .container { width: min(100% - 28px, 1180px); }
   .section { padding: 80px 0; }
   .nav-shell { width: calc(100% - 20px); height: 62px; padding-left: 12px; }
-  .brand img { width: 180px; }
+  .brand-mark { width: 42px; height: 42px; }
+  .brand-wordmark strong { font-size: .8rem; }
+  .brand-wordmark em { font-size: .94rem; }
+  .brand-wordmark small { font-size: .37rem; }
   .hero { min-height: auto; padding-top: 130px; }
   .hero h1 { font-size: clamp(2.8rem, 14vw, 4.2rem); }
   .hero-lead { font-size: 1rem; }

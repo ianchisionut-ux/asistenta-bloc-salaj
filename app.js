@@ -123,7 +123,7 @@ offerForm.addEventListener('submit', async (event) => {
   event.preventDefault();
   const data = new FormData(offerForm);
   const details = String(data.get('details') || '').trim() || 'Evaluare generală a serviciilor de administrare.';
-  const summary = `Solicitare evaluare — Asistență Bloc Sălaj\n\nNume: ${data.get('name')}\nTelefon: ${data.get('phone')}\nLocalitate: ${data.get('city')}\nNumăr apartamente: ${data.get('apartments')}\n\nNecesități:\n${details}`;
+  const summary = `Solicitare evaluare — PRO BLOC MANAGER\n\nNume: ${data.get('name')}\nTelefon: ${data.get('phone')}\nLocalitate: ${data.get('city')}\nNumăr apartamente: ${data.get('apartments')}\n\nNecesități:\n${details}`;
   const submitButton = offerForm.querySelector('[type="submit"]');
   const initialButtonContent = submitButton.innerHTML;
   submitButton.disabled = true;
