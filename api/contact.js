@@ -1,4 +1,4 @@
-const DESTINATION_EMAIL = process.env.CONTACT_EMAIL || 'asistentablocsalaj@gmail.com';
+const DESTINATION_EMAIL = process.env.CONTACT_EMAIL || 'zsolt85lakatos@gmail.com';
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'PRO BLOC MANAGER <onboarding@resend.dev>';
 
 const limits = {
