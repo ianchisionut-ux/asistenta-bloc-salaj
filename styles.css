@@ -333,6 +333,10 @@ input[type="range"]::-webkit-slider-thumb { width: 22px; height: 22px; appearanc
 .footer-main nav .icon { width: 14px; height: 14px; color: #60d996; }
 .footer-main a:hover { color: white; }
 .footer-bottom { display: flex; justify-content: space-between; padding: 22px 0; border-top: 1px solid rgba(255,255,255,.09); font-size: .68rem; }
+.footer-legal { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; justify-content: flex-end; }
+.footer-legal a, .footer-legal button { color: #b2c1ca; text-decoration: underline; text-underline-offset: 3px; }
+.footer-legal button { padding: 0; border: 0; background: none; font: inherit; cursor: pointer; }
+.footer-legal a:hover, .footer-legal button:hover { color: white; }
 
 .modal { width: min(560px, calc(100% - 32px)); padding: 38px; border: 0; border-radius: 24px; color: var(--ink); box-shadow: 0 35px 100px rgba(0,0,0,.35); }
 .modal::backdrop { background: rgba(3,15,25,.78); backdrop-filter: blur(8px); }
@@ -346,6 +350,36 @@ input[type="range"]::-webkit-slider-thumb { width: 22px; height: 22px; appearanc
 .request-modal pre { max-height: 260px; overflow: auto; padding: 18px; border-radius: 12px; background: var(--paper); white-space: pre-wrap; font: 500 .78rem/1.7 ui-monospace, SFMono-Regular, Consolas, monospace; }
 .toast { position: fixed; right: 22px; bottom: 22px; z-index: 300; padding: 14px 18px; border-radius: 12px; color: white; background: var(--navy-900); box-shadow: var(--shadow); opacity: 0; transform: translateY(15px); pointer-events: none; transition: opacity .25s, transform .25s; font-size: .8rem; font-weight: 750; }
 .toast.show { opacity: 1; transform: translateY(0); }
+
+.cookie-notice { position: fixed; left: 22px; bottom: 22px; z-index: 400; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 16px; width: min(760px, calc(100vw - 120px)); padding: 18px; border: 1px solid rgba(255,255,255,.14); border-radius: 18px; color: white; background: rgba(4,19,32,.97); box-shadow: 0 24px 70px rgba(0,0,0,.34); backdrop-filter: blur(14px); }
+.cookie-notice[hidden] { display: none; }
+.cookie-notice-icon { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; color: #052316; background: #67e49e; font-weight: 950; }
+.cookie-notice-copy strong { display: block; margin-bottom: 4px; font-size: .86rem; }
+.cookie-notice-copy p { margin: 0; color: #c3d0d7; font-size: .72rem; line-height: 1.55; }
+.cookie-notice-copy a { display: inline-block; margin-top: 5px; color: #72e7a5; font-size: .68rem; font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
+.cookie-notice-button { white-space: nowrap; padding: 12px 17px; }
+
+.legal-page { min-height: 100vh; color: var(--ink); background: var(--paper); }
+.legal-header { position: relative; display: flex; align-items: center; justify-content: space-between; width: min(100% - 40px, 980px); min-height: 96px; margin: 20px auto 0; padding: 0 24px; border: 1px solid var(--line); border-radius: 20px; background: white; box-shadow: 0 14px 40px rgba(7,29,49,.08); }
+.legal-header .brand { display: inline-flex; align-items: center; gap: 10px; }
+.legal-header .brand-mark { width: 50px; height: 50px; }
+.legal-shell { width: min(100% - 40px, 860px); margin: 76px auto; }
+.legal-kicker { margin: 0 0 14px; color: var(--green-dark); font-size: .7rem; font-weight: 900; letter-spacing: .14em; }
+.legal-shell h1 { max-width: 860px; margin: 0; font-size: clamp(2.7rem, 7vw, 4.5rem); line-height: .98; letter-spacing: -.055em; }
+.legal-updated { margin: 18px 0 58px; color: var(--muted); font-size: .82rem; }
+.legal-shell section { padding: 34px 0; border-top: 1px solid var(--line); }
+.legal-shell h2 { margin: 0 0 14px; font-size: 1.25rem; letter-spacing: -.02em; }
+.legal-shell p { max-width: 780px; margin: 0 0 12px; color: #4f6572; font-size: .92rem; line-height: 1.8; }
+.legal-shell p:last-child { margin-bottom: 0; }
+.legal-shell a { color: var(--green-dark); font-weight: 750; text-decoration: underline; text-underline-offset: 3px; }
+.legal-table-wrap { margin: 20px 0; overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: white; }
+.legal-table-wrap table { width: 100%; min-width: 660px; border-collapse: collapse; text-align: left; }
+.legal-table-wrap th, .legal-table-wrap td { padding: 15px 16px; border-bottom: 1px solid var(--line); font-size: .78rem; line-height: 1.55; vertical-align: top; }
+.legal-table-wrap th { color: var(--navy-900); background: #edf4f2; font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; }
+.legal-table-wrap tr:last-child td { border-bottom: 0; }
+.legal-table-wrap code { color: var(--green-dark); font-weight: 800; }
+.legal-footer { display: flex; justify-content: space-between; gap: 20px; width: min(100% - 40px, 980px); margin: 0 auto 40px; padding: 26px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .72rem; }
+.legal-footer a { color: var(--green-dark); font-weight: 800; }
 
 .whatsapp-float { position: fixed; right: 24px; bottom: 24px; z-index: 180; display: grid; place-items: center; width: 62px; height: 62px; padding: 14px; border: 1px solid rgba(255,255,255,.5); border-radius: 50%; color: white; background: #25d366; box-shadow: 0 10px 30px rgba(9,92,47,.35); cursor: pointer; transition: transform .2s; }
 .whatsapp-float::before { content: ""; position: absolute; inset: -1px; border: 2px solid #25d366; border-radius: 50%; animation: whatsapp-pulse 2.8s ease-out infinite; pointer-events: none; }
@@ -487,8 +521,19 @@ input[type="range"]::-webkit-slider-thumb { width: 22px; height: 22px; appearanc
   .site-footer { margin-top: 70px; }
   .footer-main { grid-template-columns: 1fr; gap: 18px; padding: 50px 0 35px; }
   .footer-main nav { grid-column: auto; flex-wrap: wrap; padding: 10px 0 0; }
-  .footer-bottom { flex-direction: column; gap: 8px; }
+  .footer-bottom { flex-direction: column; gap: 8px; padding-bottom: 92px; }
+  .footer-legal { flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 10px; }
   .modal { padding: 34px 22px 24px; }
   .whatsapp-float { right: 14px; bottom: 14px; }
   .whatsapp-card { right: 14px; bottom: 84px; width: min(290px, calc(100vw - 28px)); }
+  .cookie-notice { left: 10px; right: 10px; bottom: 10px; width: auto; grid-template-columns: 40px minmax(0, 1fr); padding: 15px; }
+  .cookie-notice-button { grid-column: 1 / -1; width: 100%; }
+  .cookie-notice-open .whatsapp-float { bottom: 224px; }
+  .cookie-notice-open .whatsapp-card { bottom: 294px; }
+  .legal-header { min-height: 78px; padding: 0 14px; }
+  .legal-header .brand-mark { width: 42px; height: 42px; }
+  .legal-header .button { padding: 10px 12px; font-size: .66rem; }
+  .legal-shell { margin: 54px auto; }
+  .legal-updated { margin-bottom: 42px; }
+  .legal-footer { flex-direction: column; }
 }

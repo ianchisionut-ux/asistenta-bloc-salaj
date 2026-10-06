@@ -268,3 +268,49 @@ whatsappClose.addEventListener('click', () => setWhatsappCard(false));
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') setWhatsappCard(false);
 });
+
+const cookieNotice = $('#cookieNotice');
+const cookieAcknowledge = $('#cookieAcknowledge');
+const cookieSettings = $('#cookieSettings');
+const cookiePreferenceKey = 'pbm_cookie_notice_v1';
+const cookiePreferenceLifetime = 365 * 24 * 60 * 60 * 1000;
+
+function readCookiePreference() {
+  try {
+    const preference = JSON.parse(localStorage.getItem(cookiePreferenceKey));
+    if (!preference || preference.status !== 'necessary-only' || Date.now() - preference.savedAt > cookiePreferenceLifetime) {
+      localStorage.removeItem(cookiePreferenceKey);
+      return null;
+    }
+    return preference;
+  } catch {
+    return null;
+  }
+}
+
+function setCookieNotice(open) {
+  cookieNotice.hidden = !open;
+  document.body.classList.toggle('cookie-notice-open', open);
+}
+
+function saveCookiePreference() {
+  try {
+    localStorage.setItem(cookiePreferenceKey, JSON.stringify({
+      status: 'necessary-only',
+      savedAt: Date.now(),
+      version: 1,
+    }));
+  } catch {
+    // Site-ul rămâne complet funcțional dacă stocarea locală este blocată.
+  }
+  setCookieNotice(false);
+  showToast('Preferința de confidențialitate a fost salvată.');
+}
+
+cookieAcknowledge.addEventListener('click', saveCookiePreference);
+cookieSettings.addEventListener('click', () => {
+  setCookieNotice(true);
+  cookieAcknowledge.focus();
+});
+
+setCookieNotice(!readCookiePreference());
