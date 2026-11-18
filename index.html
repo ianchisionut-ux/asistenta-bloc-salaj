@@ -15,27 +15,38 @@
     <meta property="og:site_name" content="PRO BLOC MANAGER" />
     <meta property="og:url" content="https://www.pro-bloc-manager.ro/" />
     <meta property="og:image" content="https://www.pro-bloc-manager.ro/assets/hero-seo.jpg" />
+    <meta property="og:image:secure_url" content="https://www.pro-bloc-manager.ro/assets/hero-seo.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="957" />
     <meta property="og:image:alt" content="Panoramă aeriană a municipiului Zalău" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Administrare Blocuri Zalău și Sălaj" />
     <meta name="twitter:description" content="Administrare imobile și asociații de proprietari în Zalău și județul Sălaj." />
     <meta name="twitter:image" content="https://www.pro-bloc-manager.ro/assets/hero-seo.jpg" />
+    <meta name="twitter:image:alt" content="Panoramă aeriană a municipiului Zalău" />
     <title>Administrare Blocuri Zalău și Sălaj | PRO BLOC MANAGER</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
-    <link rel="preload" as="image" href="/assets/hero-seo.jpg" fetchpriority="high" />
-    <link rel="icon" href="/assets/logo-mark.png?v=20260930" type="image/png" sizes="350x350" />
-    <link rel="shortcut icon" href="/assets/logo-mark.png?v=20260930" type="image/png" />
-    <link rel="apple-touch-icon" href="/assets/logo-mark.png?v=20260930" />
-    <link rel="stylesheet" href="/styles.css" />
-    <script src="/app.js" defer></script>
+    <link rel="preload" href="/assets/fonts/manrope-latin.woff2?v=20261118" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/manrope-latin-ext.woff2?v=20261118" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" as="image" href="/assets/hero-seo-mobile.avif?v=20261118" type="image/avif" media="(max-width: 720px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/hero-seo.avif?v=20261118" imagesrcset="/assets/hero-seo-960.avif?v=20261118 960w, /assets/hero-seo.avif?v=20261118 1600w" imagesizes="100vw" type="image/avif" media="(min-width: 721px)" fetchpriority="high" />
+    <link rel="icon" href="/assets/favicon-48.png?v=20261118" type="image/png" sizes="48x48" />
+    <link rel="apple-touch-icon" href="/assets/logo-mark.png?v=20261118" />
+    <link rel="stylesheet" href="/styles.min.css?v=20261118" />
+    <script>
+      try {
+        const preference = JSON.parse(localStorage.getItem('pbm_cookie_notice_v1'));
+        if (preference?.status === 'necessary-only' && Date.now() - preference.savedAt <= 31536000000) {
+          document.documentElement.classList.add('cookie-preference-saved');
+        }
+      } catch {}
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": "LocalBusiness",
+            "@type": ["LocalBusiness", "ProfessionalService"],
             "@id": "https://www.pro-bloc-manager.ro/#business",
             "name": "PRO BLOC MANAGER",
             "legalName": "PRO BLOC MANAGER SRL",
@@ -44,6 +55,17 @@
             "image": "https://www.pro-bloc-manager.ro/assets/hero-seo.jpg",
             "description": "Servicii de administrare blocuri, imobile și asociații de proprietari în Zalău și județul Sălaj.",
             "telephone": "+40766668394",
+            "email": "zsolt85lakatos@gmail.com",
+            "knowsLanguage": ["ro"],
+            "mainEntityOfPage": { "@id": "https://www.pro-bloc-manager.ro/#webpage" },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+40766668394",
+              "email": "zsolt85lakatos@gmail.com",
+              "contactType": "customer service",
+              "areaServed": "RO",
+              "availableLanguage": ["Romanian"]
+            },
             "priceRange": "de la 20 RON/apartament/lună",
             "taxID": "31321779",
             "foundingDate": "2013-03-06",
@@ -76,6 +98,49 @@
             "name": "PRO BLOC MANAGER",
             "inLanguage": "ro-RO",
             "publisher": { "@id": "https://www.pro-bloc-manager.ro/#business" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://www.pro-bloc-manager.ro/#webpage",
+            "url": "https://www.pro-bloc-manager.ro/",
+            "name": "Administrare Blocuri Zalău și Sălaj | PRO BLOC MANAGER",
+            "description": "Administrare blocuri și imobile în Zalău și județul Sălaj: contabilitate, mentenanță, comunicare și înființare asociații de proprietari.",
+            "inLanguage": "ro-RO",
+            "isPartOf": { "@id": "https://www.pro-bloc-manager.ro/#website" },
+            "about": { "@id": "https://www.pro-bloc-manager.ro/#business" },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://www.pro-bloc-manager.ro/assets/hero-seo.jpg",
+              "width": 1600,
+              "height": 957
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://www.pro-bloc-manager.ro/administrare-blocuri-zalau#service",
+            "name": "Administrare blocuri în Zalău",
+            "url": "https://www.pro-bloc-manager.ro/administrare-blocuri-zalau",
+            "provider": { "@id": "https://www.pro-bloc-manager.ro/#business" },
+            "areaServed": { "@type": "City", "name": "Zalău" },
+            "serviceType": "Administrare blocuri și asociații de proprietari"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://www.pro-bloc-manager.ro/administrare-imobile-salaj#service",
+            "name": "Administrare imobile în județul Sălaj",
+            "url": "https://www.pro-bloc-manager.ro/administrare-imobile-salaj",
+            "provider": { "@id": "https://www.pro-bloc-manager.ro/#business" },
+            "areaServed": { "@type": "AdministrativeArea", "name": "Județul Sălaj" },
+            "serviceType": "Administrare imobile și asociații de proprietari"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://www.pro-bloc-manager.ro/infiintare-asociatie-proprietari-zalau#service",
+            "name": "Asistență pentru înființarea asociației de proprietari în Zalău",
+            "url": "https://www.pro-bloc-manager.ro/infiintare-asociatie-proprietari-zalau",
+            "provider": { "@id": "https://www.pro-bloc-manager.ro/#business" },
+            "areaServed": { "@type": "City", "name": "Zalău" },
+            "serviceType": "Asistență pentru constituirea asociației de proprietari"
           },
           {
             "@type": "FAQPage",
@@ -132,8 +197,8 @@
 
     <header class="site-header" id="acasa">
       <div class="nav-shell">
-        <a class="brand" href="#acasa" aria-label="PRO BLOC MANAGER — acasă">
-          <img class="brand-mark" src="/assets/logo-mark.png" alt="" />
+        <a class="brand" href="#acasa">
+          <img class="brand-mark" src="/assets/logo-mark-96.webp?v=20261118" srcset="/assets/logo-mark-96.webp?v=20261118 1x, /assets/logo-mark-256.webp?v=20261118 2x" width="96" height="96" alt="" />
           <span class="brand-wordmark"><strong>PRO BLOC</strong><em>MANAGER</em><small>ADMINISTRARE IMOBILE</small></span>
         </a>
 
@@ -155,14 +220,20 @@
     <main id="continut">
       <section class="hero section-dark">
         <div class="hero-backgrounds" aria-hidden="true">
-          <img class="hero-background is-active" data-hero-bg src="/assets/hero-seo.jpg" width="1600" height="957" alt="" fetchpriority="high" />
-          <img class="hero-background" data-hero-bg src="/assets/hero-oras-top.jpg" width="750" height="481" alt="" />
-          <img class="hero-background" data-hero-bg src="/assets/hero-zalau-aerial.jpg" width="800" height="531" alt="" />
+          <picture class="hero-picture">
+            <source media="(max-width: 720px)" type="image/avif" srcset="/assets/hero-seo-mobile.avif?v=20261118" />
+            <source media="(max-width: 720px)" type="image/webp" srcset="/assets/hero-seo-mobile.webp?v=20261118" />
+            <source type="image/avif" srcset="/assets/hero-seo-960.avif?v=20261118 960w, /assets/hero-seo.avif?v=20261118 1600w" sizes="100vw" />
+            <source type="image/webp" srcset="/assets/hero-seo.webp?v=20261118" />
+            <img class="hero-background is-active" data-hero-bg src="/assets/hero-seo.jpg?v=20261118" width="1600" height="957" alt="" fetchpriority="high" decoding="async" />
+          </picture>
+          <img class="hero-background" data-hero-bg data-hero-src="/assets/hero-oras-top.avif?v=20261118" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" width="1600" height="1065" alt="" decoding="async" />
+          <img class="hero-background" data-hero-bg data-hero-src="/assets/hero-zalau-aerial.avif?v=20261118" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" width="1600" height="1060" alt="" decoding="async" />
         </div>
         <div class="hero-glow hero-glow-one"></div>
         <div class="hero-glow hero-glow-two"></div>
         <div class="container hero-grid">
-          <div class="hero-copy reveal">
+          <div class="hero-copy">
             <div class="eyebrow eyebrow-light"><span></span> Administrare imobile · Județul Sălaj</div>
             <h1>Administrare blocuri<br /><em>în Zalău și Sălaj.</em></h1>
             <p class="hero-lead">Servicii de administrare imobile pentru asociații de proprietari: evidență financiară, coordonare tehnică și comunicare clară.</p>
@@ -176,9 +247,9 @@
             </div>
           </div>
 
-          <div class="hero-panel reveal" data-delay="120">
-            <a class="hero-qr" href="https://wa.me/40766668394" target="_blank" rel="noopener noreferrer" aria-label="Contactează PRO BLOC MANAGER pe WhatsApp la 0766 668 394">
-              <img src="/assets/whatsapp-qr-394.png" width="512" height="512" alt="Scanează codul QR pentru WhatsApp" />
+          <div class="hero-panel">
+            <a class="hero-qr" href="https://wa.me/40766668394" target="_blank" rel="noopener noreferrer">
+              <img src="/assets/whatsapp-qr-394.png?v=20261118" width="512" height="512" alt="" aria-hidden="true" decoding="async" />
               <span><small>Scanează pentru contact direct</small><strong>WhatsApp · 0766 668 394 <span aria-hidden="true">↗</span></strong></span>
             </a>
             <div class="metric-grid">
@@ -241,6 +312,39 @@
         </div>
       </section>
 
+      <section class="section local-seo-section" aria-labelledby="localServicesTitle">
+        <div class="container">
+          <div class="section-heading split-heading reveal">
+            <div>
+              <div class="eyebrow"><span></span> Servicii locale în Zalău și Sălaj</div>
+              <h2 id="localServicesTitle">Administrare de blocuri, imobile și asociații de proprietari.</h2>
+            </div>
+            <p>Ai acces la un administrator local pentru evidența financiară, coordonarea intervențiilor, comunicarea cu proprietarii și organizarea documentelor asociației.</p>
+          </div>
+
+          <div class="local-links-grid">
+            <a class="local-link-card reveal" href="/administrare-blocuri-zalau">
+              <span>01 · ZALĂU</span>
+              <h3>Administrare blocuri în Zalău</h3>
+              <p>Serviciu complet pentru asociațiile care vor liste corecte, cheltuieli urmărite și solicitări rezolvate organizat.</p>
+              <strong>Detalii despre administrarea blocurilor <span aria-hidden="true">→</span></strong>
+            </a>
+            <a class="local-link-card reveal" data-delay="80" href="/administrare-imobile-salaj">
+              <span>02 · JUDEȚUL SĂLAJ</span>
+              <h3>Administrare imobile în Sălaj</h3>
+              <p>Administrare adaptată blocurilor și asociațiilor din municipiul Zalău și localitățile județului Sălaj.</p>
+              <strong>Vezi serviciile pentru Sălaj <span aria-hidden="true">→</span></strong>
+            </a>
+            <a class="local-link-card reveal" data-delay="160" href="/infiintare-asociatie-proprietari-zalau">
+              <span>03 · ÎNFIINȚARE</span>
+              <h3>Înființare asociație de proprietari</h3>
+              <p>Îndrumare pentru documente, acordul de asociere, adunarea constitutivă și pașii de înregistrare.</p>
+              <strong>Află pașii necesari <span aria-hidden="true">→</span></strong>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section class="section showcase-section" id="galerie" aria-labelledby="showcaseTitle">
         <div class="showcase-orb showcase-orb-one" aria-hidden="true"></div>
         <div class="showcase-orb showcase-orb-two" aria-hidden="true"></div>
@@ -256,7 +360,7 @@
           <div class="showcase-carousel reveal" data-carousel aria-roledescription="carusel" aria-label="Cum funcționează administrarea unui bloc">
             <div class="showcase-stage">
               <article class="showcase-slide is-active" data-slide aria-hidden="false">
-                <img src="/assets/hero-seo.jpg" width="1600" height="957" alt="Blocuri de locuințe administrate organizat" loading="lazy" />
+                <img src="/assets/hero-seo.avif?v=20261118" width="1600" height="957" alt="Blocuri de locuințe administrate organizat" loading="lazy" decoding="async" />
                 <div class="slide-shade"></div>
                 <div class="slide-layout">
                   <div class="slide-copy">
@@ -277,7 +381,7 @@
               </article>
 
               <article class="showcase-slide" data-slide aria-hidden="true">
-                <img src="/assets/process-building.jpg" width="2400" height="1596" alt="Fațada unui bloc modern și bine întreținut" loading="lazy" />
+                <img src="/assets/process-building.avif?v=20261118" width="1600" height="1064" alt="Fațada unui bloc modern și bine întreținut" loading="lazy" decoding="async" />
                 <div class="slide-shade"></div>
                 <div class="slide-layout">
                   <div class="slide-copy">
@@ -298,7 +402,7 @@
               </article>
 
               <article class="showcase-slide" data-slide aria-hidden="true">
-                <img src="/assets/zalau-hero.jpeg" width="696" height="521" alt="Vedere asupra municipiului Zalău și a comunității locale" loading="lazy" />
+                <img src="/assets/zalau-hero.avif?v=20261118" width="696" height="521" alt="Vedere asupra municipiului Zalău și a comunității locale" loading="lazy" decoding="async" />
                 <div class="slide-shade"></div>
                 <div class="slide-layout">
                   <div class="slide-copy">
@@ -340,7 +444,7 @@
           <div class="process-visual reveal">
             <div class="orbit orbit-one"></div>
             <div class="orbit orbit-two"></div>
-            <img src="/assets/logo-mark.png" alt="" aria-hidden="true" />
+            <img src="/assets/logo-mark-256.webp?v=20261118" width="256" height="256" alt="" aria-hidden="true" />
             <div class="float-card fc-one"><span>01</span> Evaluare inițială</div>
             <div class="float-card fc-two"><span>02</span> Plan de preluare</div>
             <div class="float-card fc-three"><span>03</span> Administrare curentă</div>
@@ -406,6 +510,11 @@
             <div class="eyebrow"><span></span> Identitate locală</div>
             <h2>Aproape de blocurile și oamenii din Sălaj.</h2>
             <p>PRO BLOC MANAGER este numele sub care construim un serviciu de administrare atent, lizibil și orientat către buna funcționare a comunității.</p>
+            <address class="company-contact" aria-label="Date de contact PRO BLOC MANAGER">
+              <a href="tel:+40766668394"><strong>Telefon</strong><span>0766 668 394</span></a>
+              <a href="mailto:zsolt85lakatos@gmail.com"><strong>Email</strong><span>zsolt85lakatos@gmail.com</span></a>
+              <span><strong>Sediu</strong><span>Str. Gheorghe Doja nr. 48, Zalău, Sălaj</span></span>
+            </address>
             <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Strada+Gheorghe+Doja+48+Zalau+Salaj" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#icon-map-pin" /></svg>Vezi sediul pe hartă <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right" /></svg></a>
           </div>
           <div class="company-card reveal" data-delay="100">
@@ -445,7 +554,7 @@
             </div>
             <label>Ce doriți să îmbunătățiți?<textarea name="details" rows="4" maxlength="2000" placeholder="Ex.: evidența cheltuielilor, mentenanța, comunicarea cu proprietarii..."></textarea></label>
             <button class="button button-submit" type="submit"><svg class="icon" aria-hidden="true"><use href="#icon-send" /></svg>Trimite cererea</button>
-            <p class="form-note">Prin trimitere, ești de acord ca datele introduse să fie folosite pentru a răspunde solicitării tale.</p>
+            <p class="form-note">Prin trimitere, ești de acord ca datele introduse să fie folosite pentru a răspunde solicitării tale. <a href="/politica-confidentialitate">Vezi politica de confidențialitate</a>.</p>
           </form>
         </div>
       </section>
@@ -482,15 +591,18 @@
     <footer class="site-footer">
       <div class="container footer-main">
         <div class="brand brand-footer" aria-label="PRO BLOC MANAGER">
-          <img class="brand-mark" src="/assets/logo-mark.png" alt="" />
+          <img class="brand-mark" src="/assets/logo-mark-96.webp?v=20261118" srcset="/assets/logo-mark-96.webp?v=20261118 1x, /assets/logo-mark-256.webp?v=20261118 2x" width="96" height="96" alt="" />
           <span class="brand-wordmark"><strong>PRO BLOC</strong><em>MANAGER</em><small>ADMINISTRARE IMOBILE</small></span>
         </div>
-        <p>Administrare blocuri și imobile pentru asociațiile de proprietari din Zalău și județul Sălaj.</p>
-        <nav aria-label="Navigație subsol"><a href="#servicii"><svg class="icon" aria-hidden="true"><use href="#icon-grid" /></svg>Servicii</a><a href="#calculator"><svg class="icon" aria-hidden="true"><use href="#icon-calculator" /></svg>Calculator</a><a href="#companie"><svg class="icon" aria-hidden="true"><use href="#icon-building" /></svg>Companie</a><a href="#oferta"><svg class="icon" aria-hidden="true"><use href="#icon-send" /></svg>Evaluare</a></nav>
+        <div class="footer-summary">
+          <p>Administrare blocuri și imobile pentru asociațiile de proprietari din Zalău și județul Sălaj.</p>
+          <address><a href="tel:+40766668394">0766 668 394</a><a href="mailto:zsolt85lakatos@gmail.com">zsolt85lakatos@gmail.com</a><span>Str. Gheorghe Doja nr. 48, Zalău</span></address>
+        </div>
+        <nav aria-label="Servicii locale"><a href="/administrare-blocuri-zalau">Blocuri Zalău</a><a href="/administrare-imobile-salaj">Imobile Sălaj</a><a href="/infiintare-asociatie-proprietari-zalau">Înființare asociație</a><a href="#oferta"><svg class="icon" aria-hidden="true"><use href="#icon-send" /></svg>Evaluare</a></nav>
       </div>
       <div class="container footer-bottom">
         <span>© 2026 PRO BLOC MANAGER SRL. Toate drepturile rezervate.</span>
-        <span class="footer-legal"><span>CUI 31321779 · J31/82/2013</span><a href="/politica-cookie">Politica de cookie-uri</a><button id="cookieSettings" type="button">Setări cookie</button></span>
+        <span class="footer-legal"><span>CUI 31321779 · J31/82/2013</span><a href="/politica-confidentialitate">Confidențialitate</a><a href="/politica-cookie">Politica de cookie-uri</a><button id="cookieSettings" type="button">Setări cookie</button></span>
       </div>
     </footer>
 
@@ -512,20 +624,20 @@
       <button class="button button-dark" id="copyRequest" type="button"><svg class="icon" aria-hidden="true"><use href="#icon-copy" /></svg>Copiază detaliile</button>
     </dialog>
 
-    <aside class="whatsapp-card" id="whatsappCard" aria-hidden="true">
+    <aside class="whatsapp-card with-cookie-notice" id="whatsappCard" aria-hidden="true">
       <button class="whatsapp-close" type="button" aria-label="Închide codul QR">×</button>
       <span>Scrie-ne pe WhatsApp</span>
       <strong>0766 668 394</strong>
-      <img src="/assets/whatsapp-qr-394.png" alt="Cod QR către WhatsApp, numărul 0766 668 394" />
+      <img src="/assets/whatsapp-qr-394.png?v=20261118" width="512" height="512" alt="Cod QR către WhatsApp, numărul 0766 668 394" loading="lazy" decoding="async" />
       <small>Scanează codul sau deschide conversația direct.</small>
       <a href="https://wa.me/40766668394" target="_blank" rel="noopener noreferrer">Deschide WhatsApp <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right" /></svg></a>
     </aside>
 
-    <button class="whatsapp-float" id="whatsappToggle" type="button" aria-label="Contact pe WhatsApp" aria-expanded="false" aria-controls="whatsappCard">
+    <button class="whatsapp-float with-cookie-notice is-ready" id="whatsappToggle" type="button" aria-label="Contact pe WhatsApp" aria-expanded="false" aria-controls="whatsappCard">
       <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.85 11.85 0 0 0 12.05 0C5.47 0 .12 5.35.12 11.93c0 2.1.55 4.16 1.6 5.98L0 24l6.26-1.64a11.94 11.94 0 0 0 5.79 1.47h.01c6.58 0 11.94-5.35 11.94-11.93 0-3.19-1.24-6.18-3.48-8.42ZM12.05 21.8a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.72.98.99-3.63-.23-.37a9.85 9.85 0 0 1-1.51-5.26c0-5.46 4.44-9.9 9.91-9.9 2.64 0 5.12 1.03 6.98 2.9a9.82 9.82 0 0 1 2.9 6.99c0 5.45-4.45 9.89-9.92 9.89Zm5.44-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.49 1.07 2.89 1.21 3.09c.15.2 2.11 3.22 5.11 4.52.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.08 1.76-.72 2.01-1.42.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35Z"/></svg>
     </button>
 
-    <section class="cookie-notice" id="cookieNotice" role="region" aria-labelledby="cookieNoticeTitle" hidden>
+    <section class="cookie-notice" id="cookieNotice" role="region" aria-labelledby="cookieNoticeTitle">
       <div class="cookie-notice-icon" aria-hidden="true">✓</div>
       <div class="cookie-notice-copy">
         <strong id="cookieNoticeTitle">Confidențialitate, fără urmărire</strong>
@@ -536,5 +648,12 @@
     </section>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script>
+      window.addEventListener('load', () => {
+        const script = document.createElement('script');
+        script.src = '/app.js?v=20261118';
+        document.body.append(script);
+      }, { once: true });
+    </script>
   </body>
 </html>
